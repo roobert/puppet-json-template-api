@@ -1,0 +1,1 @@
+# puppet-json-template-api
