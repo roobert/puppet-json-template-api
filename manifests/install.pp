@@ -9,6 +9,8 @@ class json_template_api::install (
     provider => git,
     branch   => 'master',
     source   => 'https://github.com/roobert/json_template_api.git',
+    owner    => 'jt-api',
+    group    => 'jt-api',
   }
 
   file { '/etc/systemd/system/json_template_api.service':
