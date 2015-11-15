@@ -13,7 +13,7 @@ class json_template_api::install (
 
   file { '/etc/systemd/system/json_template_api.service':
     ensure => link,
-    target => '/opt/json_template_api/systemd.service',
-    notify => Service['json_template_api.service'],
+    target => '/opt/json_template_api/json_template_api.service',
+    notify => Service['json_template_api'],
   }
 }
