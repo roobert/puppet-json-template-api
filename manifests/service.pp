@@ -1,5 +1,5 @@
 class json_template_api::service {
-  service { 'thin':
+  service { 'json_template_api':
     ensure => running,
     enable => true,
   }
