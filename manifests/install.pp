@@ -6,7 +6,7 @@ class json_template_api::install (
   ensure_resource('package', ['grape', 'rack', 'erubis', 'git'],
     {'provider' => 'gem'})
 
-  vcsrepo { '/opt/JSONTemplateApi':
+  vcsrepo { '/opt/JSONTemplateAPI':
     ensure   => latest,
     provider => git,
     branch   => 'master',
