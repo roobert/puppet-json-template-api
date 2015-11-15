@@ -6,16 +6,16 @@ class json_template_api::install (
   ensure_resource('package', ['grape', 'rack', 'erubis', 'git'],
     {'provider' => 'gem'})
 
-  vcsrepo { '/opt/JSONTemplateAPI':
+  vcsrepo { '/opt/json_template_api':
     ensure   => latest,
     provider => git,
     branch   => 'master',
-    source   => 'https://github.com/roobert/JSONTemplateAPI.git',
+    source   => 'https://github.com/roobert/json_template_api.git',
   }
 
-  file { "/etc/thin${thin_version}/JSONTemplateAPI.yml":
+  file { "/etc/thin${thin_version}/json_template_api.yml":
     ensure => link,
-    target => '/opt/JSONTemplateAPI/thin.yml',
+    target => '/opt/json_template_api/thin.yml',
     notify => Service['thin'],
   }
 }
