@@ -11,9 +11,9 @@ class json_template_api::install (
     source   => 'https://github.com/roobert/json_template_api.git',
   }
 
-  file { '/etc/init/json_template_api.conf':
+  file { '/etc/systemd/system/json_template_api.service':
     ensure => link,
-    target => '/opt/json_template_api/init.conf',
+    target => '/opt/json_template_api/systemd.conf',
     notify => Service['json_template_api'],
   }
 }
