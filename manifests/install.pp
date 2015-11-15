@@ -5,9 +5,9 @@ class json_template_api::install (
     {'provider' => 'gem'})
 
   vcsrepo { '/opt/json_template_api':
-    ensure   => latest,
+    ensure   => present,
     provider => git,
-    branch   => 'master',
+    revision => 'master',
     source   => 'https://github.com/roobert/json_template_api.git',
     owner    => 'jt-api',
     group    => 'jt-api',
